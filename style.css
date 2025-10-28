@@ -1,0 +1,168 @@
+.bg-img {
+  display: block;
+  width: 37.8cm;
+  height: 20cm;
+}
+.logo-img {
+  display: block;
+  width: 800px;
+  position: absolute;
+  top: -180px;
+  left: -290px;
+  z-index: 2;
+}
+
+.pgT-img {
+  display: block;
+  width: 200px;
+  position: absolute;
+  top: 30px;
+  left: 185px;
+  z-index: 99;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.jogak {
+  position: relative;
+}
+
+.jogak-black {
+  position: relative;
+  width: 1400px;
+  top: -914px;
+  left: 44px;
+  z-index: 2;
+}
+
+.jogak-img {
+  display: block;
+  width: 410px;
+  position: absolute;
+  top: -586px;
+  left: 427px;
+  z-index: 1;
+}
+
+.tuwoo {
+  position: relative;
+}
+
+.tuwoo-black {
+  position: relative;
+  width: 1400px;
+  top: -1869px;
+  left: 42px;
+  z-index: 2;
+}
+
+.tuwoo-img {
+  display: block;
+  width: 435px;
+  position: absolute;
+  top: -1637px;
+  left: 621px;
+  z-index: 1;
+}
+
+.jogakT-img {
+  display: block;
+  width: 320px;
+  position: absolute;
+  top: 280px;
+  left: 230px;
+  z-index: 99;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tuwooT-img {
+  display: block;
+  width: 430px;
+  position: absolute;
+  top: 172px;
+  left: 915px;
+
+  z-index: 99;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-8px);
+  }
+  40% {
+    transform: translateX(8px);
+  }
+  60% {
+    transform: translateX(-6px);
+  }
+  80% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.jogak,
+.tuwoo {
+  animation: shake 1s ease-in-out 1;
+}
+
+.dark-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0%;
+  pointer-events: none;
+  animation: darken 4.3s ease forwards;
+  animation-delay: 0.8s;
+  z-index: 0;
+}
+
+@keyframes darken {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 50%;
+  }
+}
+
+.jogakT-img:hover {
+  opacity: 1;
+}
+
+.tuwooT-img:hover {
+  opacity: 1;
+}
+
+.pgT-img:hover {
+  opacity: 1;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.jogak-black,
+.tuwoo-black {
+  position: relative;
+  z-index: 2;
+
+  opacity: 1;
+  animation: fadeOut 4.3s ease-out forwards;
+  animation-delay: 0.8s;
+}
